@@ -82,7 +82,7 @@ npx prisma generate
 npx prisma migrate dev --name init
 ```
 
-### 5) Run the API
+### 5) Run the API in development mode
 ```bash
 npm run dev
 ```
