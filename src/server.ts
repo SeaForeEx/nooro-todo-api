@@ -27,6 +27,21 @@ app.get("/tasks", async (_req, res) => {
     }
 });
 
+// Get Single Task
+app.get("/tasks/:id", async (req, res) => {
+    const id = Number(req.params.id);
+    if (Number.isNaN(id)) return res.status(400).json({ message: "Invalid id" });
+
+    try {
+        const task = await prisma.task.findUnique({ where: { id } });
+        if (!task) return res.status(404).json({ message: "Task not found" });
+        res.json(task);
+    } catch (err) {
+        console.error("Error fetching task:", err);
+        res.status(500).json({ error: "Failed to fetch task" });
+    }
+});
+
 // Create
 app.post("/tasks", async (req, res) => {
     const { title, color } = req.body ?? {};
