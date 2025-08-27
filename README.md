@@ -84,11 +84,13 @@ npx prisma generate
 npx prisma migrate dev --name init
 ```
 
-### 5) Run the API in development mode
+### 5) Run the Server in development mode
 ```bash
 npm run dev
 ```
-Once running, the API will be available at:
+Once running, the Server will be available at:
 ```bash
 http://localhost:4000
 ```
+
+You should see ```Server is running on port 4000``` on the VS Code terminal after you ```npm run dev```.
