@@ -43,8 +43,8 @@ npm install
 ```
 
 ### 2) Configure environment variables
-```bash
 Create .env (copy from .env.example if present) with:
+```bash
 PORT=4000
 CORS_ORIGIN=http://localhost:3000
 DATABASE_URL="mysql://root:root@localhost:3306/todo"
