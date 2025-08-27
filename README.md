@@ -50,8 +50,8 @@ CORS_ORIGIN=http://localhost:3000
 DATABASE_URL="mysql://root:root@localhost:3306/todo"
 ```
 
-### 3) Create docker-compose.yml and start MySQL
-In the project root, create a file called docker-compose.yml with this content:
+### 3) Confirm docker-compose.yml and start MySQL
+In the project root, confirm that there is a file called docker-compose.yml with this content:
 
 ```bash
 services:
@@ -71,6 +71,8 @@ volumes:
   db: {}
 ```
 
+If there isn't, then create a docker-compose.yml file and paste the code above in there.
+
 Then start the container:
 ```bash
 docker compose up -d
@@ -89,14 +91,4 @@ npm run dev
 Once running, the API will be available at:
 ```bash
 http://localhost:4000
-```
-
-### 6) Verify API is working
-Enter the following command in your terminal
-```bash
-curl http://localhost:4000/health
-```
-Expected response:
-```bash
-{ "ok": true }
 ```
