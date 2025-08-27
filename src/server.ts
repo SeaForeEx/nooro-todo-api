@@ -81,5 +81,3 @@ app.delete("/tasks/:id", async (req, res) => {
       res.status(500).json({ message: "Failed to delete task" });
     }
 });
-
-app.listen(PORT, () => console.log(`API running on http://localhost:${PORT}`));
